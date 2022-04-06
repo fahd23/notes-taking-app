@@ -3,12 +3,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root {
+  --primary-color: #e8eaed;
+  --secondary-color: #202124;
+
+  --grey: #8a8b8d;
+  --navbar-height: 10vh;
+}
+
 body {
   font-size: 100%;
   font-family: "Roboto", sans-serif;
-  background: #202124;
-  color: #e8eaed;
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
+/* utilities */
 .flex {
   display: flex;
   flex-wrap: wrap;

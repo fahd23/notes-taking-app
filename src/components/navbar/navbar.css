@@ -1,8 +1,12 @@
 .navbar {
   font-family: "Kaushan Script", cursive;
   padding: 1rem 2rem;
-  box-shadow: 1px 1px 5px #e8eaed;
+  height: var(--navbar-height);
+  box-shadow: 1px 1px 5px var(--grey);
+}
+.logo {
+  cursor: pointer;
 }
 .warning {
-  color: black;
+  color: var(--secondary-color);
 }
