@@ -6,7 +6,7 @@
 :root {
   --primary-color: #e8eaed;
   --secondary-color: #202124;
-
+  --yellow: #facc15;
   --grey: #8a8b8d;
   --navbar-height: 10vh;
 }
@@ -24,4 +24,7 @@ body {
 }
 .jtfy-c-spce-arnd {
   justify-content: space-between;
+}
+.align-ctr {
+  align-items: center;
 }

@@ -20,6 +20,7 @@ export default function Sidebar() {
       <Link to="/delete" className="sidebar-btn">
         <MdDelete /> Delete
       </Link>
+      <button className="btn warning add-btn">Add Notes</button>
     </div>
   );
 }
