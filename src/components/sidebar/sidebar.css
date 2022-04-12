@@ -13,3 +13,8 @@
   cursor: pointer;
   color: var(--primary-color);
 }
+.add-btn {
+  margin: 1.5rem auto;
+  width: 100%;
+  color: var(--secondary-color);
+}
