@@ -1,25 +1,32 @@
 import React from "react";
 import "./sidebar.css";
 import "App.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { RiPagesLine } from "react-icons/ri";
 import { MdOutlineLabel, MdArchive, MdDelete } from "react-icons/md";
 
 export default function Sidebar() {
+  const getActiveLinkStyle = ({ isActive }) => ({
+    backgroundColor: isActive ? "var(--yellow)" : "",
+    color: isActive ? "var(--secondary-color)" : "",
+    borderTopRightRadius: isActive ? "10px" : "",
+    borderBottomRightRadius: isActive ? "10px" : "",
+    padding: isActive ? "6px 10px" : "",
+  });
   return (
     <div className="sidebar">
-      <Link to="/" className="sidebar-btn">
+      <NavLink to="/" className="sidebar-btn" style={getActiveLinkStyle}>
         <RiPagesLine /> Notes
-      </Link>
-      <Link to="/label" className="sidebar-btn">
+      </NavLink>
+      <NavLink to="/label" className="sidebar-btn" style={getActiveLinkStyle}>
         <MdOutlineLabel /> Label
-      </Link>
-      <Link to="/archive" className="sidebar-btn">
+      </NavLink>
+      <NavLink to="/archive" className="sidebar-btn" style={getActiveLinkStyle}>
         <MdArchive /> Archive
-      </Link>
-      <Link to="/delete" className="sidebar-btn">
+      </NavLink>
+      <NavLink to="/delete" className="sidebar-btn" style={getActiveLinkStyle}>
         <MdDelete /> Delete
-      </Link>
+      </NavLink>
       <button className="btn warning add-btn">Add Notes</button>
     </div>
   );

@@ -1,11 +1,17 @@
 import React from "react";
-import Homepage from "pages/Homepage";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { Homepage, Labelpage, Archivepage, Deletepage } from "pages";
 
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/label" element={<Labelpage />} />
+        <Route path="/archive" element={<Archivepage />} />
+        <Route path="/delete" element={<Deletepage />} />
+      </Routes>
     </div>
   );
 }
