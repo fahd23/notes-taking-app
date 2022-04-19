@@ -25,3 +25,9 @@ body {
 .jtfy-c-spce-arnd {
   justify-content: space-between;
 }
+.align-ctr {
+  align-items: center;
+}
+.no-flex-wrap {
+  flex-wrap: nowrap;
+}
