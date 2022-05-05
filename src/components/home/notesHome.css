@@ -45,6 +45,18 @@ textarea {
   white-space: pre-wrap;
 }
 .notes-footer {
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.delete-btn {
+  font-size: 1.5rem;
+}
+.error-msg {
+  margin: 1rem;
+  background-color: brown;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
 }

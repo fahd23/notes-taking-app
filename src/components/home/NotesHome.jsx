@@ -6,6 +6,7 @@ import { NotesList } from "./NotesList";
 const NotesHome = () => {
   const [title, setTitle] = useState("");
   const [notes, setNotes] = useState("");
+  const [error, setError] = useState(false);
   const [notesDiv, setNotesDiv] = useState([]);
 
   return (
@@ -15,14 +16,20 @@ const NotesHome = () => {
         maxlength="30"
         placeholder="Enter The Title here"
         value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => {
+          setTitle(e.target.value);
+          setError(false);
+        }}
       />
       <textarea
         cols="30"
         rows="10"
         maxlength="100"
         placeholder="Write the Notes here"
-        onChange={(e) => setNotes(e.target.value)}
+        onChange={(e) => {
+          setNotes(e.target.value);
+          setError(false);
+        }}
         value={notes}
       ></textarea>
       <button
@@ -41,11 +48,19 @@ const NotesHome = () => {
             ]);
           setNotes("");
           setTitle("");
+          if (!notes && !title) {
+            setError(true);
+          }
         }}
       >
         Save
       </button>
-      <NotesList notesDiv={notesDiv} setNotesDiv={setNotesDiv}></NotesList>
+      {error && (
+        <div className="error-msg">Please Enter Both Title and Notes</div>
+      )}
+      {!error && (
+        <NotesList notesDiv={notesDiv} setNotesDiv={setNotesDiv}></NotesList>
+      )}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { MdOutlineDelete } from "react-icons/md";
 
 export function NotesList({ notesDiv, setNotesDiv }) {
   function deletefunc(id) {
@@ -15,7 +16,9 @@ export function NotesList({ notesDiv, setNotesDiv }) {
               <p>{notes}</p>
               <div className="notes-footer">
                 <span>{date}</span>
-                <button onClick={() => deletefunc(id)}>Delete</button>
+                <button onClick={() => deletefunc(id)} className="delete-btn">
+                  <MdOutlineDelete />
+                </button>
               </div>
             </div>
           );
