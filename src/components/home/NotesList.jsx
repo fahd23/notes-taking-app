@@ -1,5 +1,5 @@
 import React from "react";
-import { MdOutlineDelete } from "react-icons/md";
+import { MdOutlineDelete, MdOutlineArchive } from "react-icons/md";
 
 export function NotesList({ notesDiv, setNotesDiv }) {
   function deletefunc(id) {
@@ -12,13 +12,19 @@ export function NotesList({ notesDiv, setNotesDiv }) {
         notesDiv.map(({ id, title, notes, date }) => {
           return (
             <div className="notes-div" key={id}>
+              <div>Created {date}</div>
               <h3>{title}</h3>
               <p>{notes}</p>
               <div className="notes-footer">
-                <span>{date}</span>
-                <button onClick={() => deletefunc(id)} className="delete-btn">
-                  <MdOutlineDelete />
-                </button>
+                <button className="edit-btn">Edit</button>
+                <div className="notes-icon-footer">
+                  <button className="icon-btn">
+                    <MdOutlineArchive />
+                  </button>
+                  <button onClick={() => deletefunc(id)} className="icon-btn">
+                    <MdOutlineDelete />
+                  </button>
+                </div>
               </div>
             </div>
           );

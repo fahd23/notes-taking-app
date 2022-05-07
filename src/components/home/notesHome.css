@@ -6,35 +6,46 @@
   flex-direction: column;
   align-items: center;
 }
-input,
-textarea {
-  min-width: 50%;
-  margin: 1rem;
-  padding: 10px;
+.input-conatiner {
+  width: 37rem;
+  margin: auto;
   border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.title-input,
+.notes-input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
   outline: solid 1px transparent;
   border: solid 1px transparent;
   background-color: var(--primary-color);
   font-size: 1.2rem;
+  resize: none;
+  max-height: 5rem;
 }
-input {
-  width: 20rem;
+.input-container-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
 }
-textarea {
-  max-width: 25rem;
-  max-height: 10rem;
+.input-control-btn {
+  font-size: 1.7rem;
+  background-color: transparent;
+  margin: 8px 4px;
 }
 .notes-list {
   margin: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 .notes-div {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  width: 20rem;
+  width: 37rem;
   min-height: 10rem;
   border-radius: 5px;
   padding: 10px;
@@ -50,12 +61,26 @@ textarea {
   justify-content: space-between;
   align-items: center;
 }
-.delete-btn {
+.notes-icon-footer {
+  margin: 0 10px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.edit-btn {
+  background-color: #ababab;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.icon-btn {
   font-size: 1.5rem;
+  background-color: transparent;
 }
 .error-msg {
   margin: 1rem;
-  background-color: brown;
+  background-color: #f43434;
   color: white;
   padding: 1rem 2rem;
   border-radius: 4px;
