@@ -28,3 +28,7 @@ body {
 .align-ctr {
   align-items: center;
 }
+.no-flex-wrap {
+  flex-wrap: nowrap;
+}
+

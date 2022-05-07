@@ -1,11 +1,15 @@
 import { Navbar, Sidebar } from "components";
+import NotesHome from "components/home/NotesHome";
 import React from "react";
-
+import "App.css";
 export default function Homepage() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Sidebar />
-    </div>
+      <div className="flex no-flex-wrap ">
+        <Sidebar />
+        <NotesHome />
+      </div>
+    </>
   );
 }

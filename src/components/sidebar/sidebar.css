@@ -1,20 +1,17 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 2rem;
-  max-width: 13rem;
+  padding: 1rem 0;
+  min-width: 13rem;
+  width: 13rem;
 }
 .sidebar-btn {
   font-size: 1.3rem;
-  padding: 1rem 0;
+  padding: 13px;
+  margin: 6px 0;
   display: flex;
   gap: 10px;
   align-items: center;
   cursor: pointer;
   color: var(--primary-color);
-}
-.add-btn {
-  margin: 1.5rem auto;
-  width: 100%;
-  color: var(--secondary-color);
 }

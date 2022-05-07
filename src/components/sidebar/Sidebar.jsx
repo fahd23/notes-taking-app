@@ -9,9 +9,8 @@ export default function Sidebar() {
   const getActiveLinkStyle = ({ isActive }) => ({
     backgroundColor: isActive ? "var(--yellow)" : "",
     color: isActive ? "var(--secondary-color)" : "",
-    borderTopRightRadius: isActive ? "10px" : "",
-    borderBottomRightRadius: isActive ? "10px" : "",
-    padding: isActive ? "6px 10px" : "",
+    borderTopRightRadius: isActive ? "2rem" : "",
+    borderBottomRightRadius: isActive ? "2rem" : "",
   });
   return (
     <div className="sidebar">
@@ -27,7 +26,6 @@ export default function Sidebar() {
       <NavLink to="/delete" className="sidebar-btn" style={getActiveLinkStyle}>
         <MdDelete /> Delete
       </NavLink>
-      <button className="btn warning add-btn">Add Notes</button>
     </div>
   );
 }

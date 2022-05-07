@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-conatiner {
+  width: 37rem;
+  margin: auto;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.title-input,
+.notes-input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  outline: solid 1px transparent;
+  border: solid 1px transparent;
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  resize: none;
+  max-height: 5rem;
+}
+.input-container-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.input-control-btn {
+  font-size: 1.7rem;
+  background-color: transparent;
+  margin: 8px 4px;
+}
+.notes-list {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.notes-div {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  width: 37rem;
+  min-height: 10rem;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.notes-footer {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notes-icon-footer {
+  margin: 0 10px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.edit-btn {
+  background-color: #ababab;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.icon-btn {
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.error-msg {
+  margin: 1rem;
+  background-color: #f43434;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
