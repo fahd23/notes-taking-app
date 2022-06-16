@@ -3,12 +3,16 @@ import { v4 as uuid } from "uuid";
 import { NotesList } from "./NotesList";
 import { TiTick, TiCancel } from "react-icons/ti";
 import "./notesHome.css";
+import { useNotes } from "context/notes-context";
+import "App.css";
 
 const NotesHome = () => {
   const [title, setTitle] = useState("");
   const [notes, setNotes] = useState("");
   const [error, setError] = useState(false);
-  const [notesDiv, setNotesDiv] = useState([]);
+
+  const { notesDiv, setNotesDiv } = useNotes();
+
   const saveNotes = () => {
     notes &&
       title &&
@@ -41,6 +45,7 @@ const NotesHome = () => {
             setError(false);
           }}
         />
+
         <textarea
           className="notes-input"
           cols="30"

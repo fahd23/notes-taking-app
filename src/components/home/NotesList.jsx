@@ -1,27 +1,33 @@
 import React from "react";
 import { MdOutlineDelete, MdOutlineArchive } from "react-icons/md";
+import { useNotes } from "context/notes-context";
 
-export function NotesList({ notesDiv, setNotesDiv }) {
-  function deletefunc(id) {
-    const newNotes = notesDiv.filter((note) => note.id !== id);
-    setNotesDiv(newNotes);
-  }
+export function NotesList({ notesDiv }) {
+  const { deleteDispatch } = useNotes();
   return (
     <div className="notes-list">
       {notesDiv &&
-        notesDiv.map(({ id, title, notes, date }) => {
+        notesDiv.map((note) => {
           return (
-            <div className="notes-div" key={id}>
-              <div>Created {date}</div>
-              <h3>{title}</h3>
-              <p>{notes}</p>
+            <div className="notes-div" key={note.id}>
+              <div>Created {note.date}</div>
+              <h3>{note.title}</h3>
+              <p>{note.notes}</p>
               <div className="notes-footer">
                 <button className="edit-btn">Edit</button>
                 <div className="notes-icon-footer">
                   <button className="icon-btn">
                     <MdOutlineArchive />
                   </button>
-                  <button onClick={() => deletefunc(id)} className="icon-btn">
+                  <button
+                    onClick={() => {
+                      deleteDispatch({
+                        type: "ADD_TO_DELETES",
+                        payload: note,
+                      });
+                    }}
+                    className="icon-btn"
+                  >
                     <MdOutlineDelete />
                   </button>
                 </div>

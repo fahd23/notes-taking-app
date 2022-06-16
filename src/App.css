@@ -32,3 +32,11 @@ body {
   flex-wrap: nowrap;
 }
 
+.container {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
